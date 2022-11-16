@@ -42,10 +42,14 @@ public class ArgumentParser {
 		for (String path : args) {
 			try {
 				Path paths = Paths.get(path);
+				if (!Files.isRegularFile(paths))
+					throw new FileNotFoundException("UnkownfileName");
+				if (!Files.isDirectory(paths))
+					throw new FileNotFoundException("UnkownDirectory");
 				if (!Files.exists(paths))
-					throw new FileNotFoundException("Please enter the correct file paths: ");
+					throw new FileNotFoundException("UnkownfileName");
 			} catch (InvalidPathException ex) {
-				System.out.println("Please enter the correct file paths: ");
+				System.out.println("UnkownfileName");
 			}
 		}
 

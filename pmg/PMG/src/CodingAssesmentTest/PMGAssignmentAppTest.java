@@ -5,10 +5,9 @@ import CodingAssesment.PMGAssignmentApp;
 public class PMGAssignmentAppTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		testWhenUnknownFileIsPassed();
-
+		testWhetherDirectoryExists();
 	}
 
 	public static void testWhenUnknownFileIsPassed() {
@@ -23,16 +22,16 @@ public class PMGAssignmentAppTest {
 			assert th.getMessage().equals("UnkownfileName");
 		}
 	}
-	
+
 	public static void testWhetherDirectoryExists() {
-	    final PMGAssignmentApp app = new PMGAssignmentApp();
-	    String[] args = new String[1];
-	    args[0] = "users/shankar/unknownDirectory";
-	    try {
-	      app.main(args);
-	    } catch (Throwable th) {
-	      assert th.getMessage().equals("UnkownDirectory");
-	    }
-	  }
+		final PMGAssignmentApp app = new PMGAssignmentApp();
+		String[] args = new String[1];
+		args[0] = "users/shankar/unknownDirectory";
+		try {
+			app.main(args);
+		} catch (Throwable th) {
+			assert th.getMessage().equals("UnkownDirectory");
+		}
+	}
 
 }
