@@ -38,3 +38,16 @@ output will look like:
 |166ca9b3a59edaf774d107533fba2c70ed309516376ce2693e92c777dd971c4b|Cardigans|clothing.csv|
 |176146e4ae48e70df2e628b45dccfd53405c73f951c003fb8c9c09b3207e7aab|Wallets|accessories.csv|
 |63d42170fa2d706101ab713de2313ad3f9a05aa0b1c875a56545cfd69f7101fe|Purses|accessories.csv|
+
+
+# Class level description
+
+PMGAssignmentApp -> Main class that invokes the project.
+
+ArgumentParser -> It takes the input file paths and validates the arguments.
+
+CSVFileReadWrite -> The main logic is implemented here, where it reads the csv files and writes the data as per requirements.
+
+CombineCSV -> It combines the given set of csv files into one.
+
+FileReadWrite -> It is an interface, where all the declarations are present.
